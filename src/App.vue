@@ -1,28 +1,57 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <a-layout id="components-layout-demo-top-side-2">
+    <a-layout-header class="header">
+      <!-- <div class="logo"> -->
+      <a-icon type="form" />
+      <!-- </div> -->
+      在线简历生成器
+    </a-layout-header>
+    <a-layout>
+      <sider/>
+      <a-layout style="padding: 0 24px 24px">
+        <div style="margin: 16px 0"></div>
+        <a-layout-content
+          :style="{
+            background: '#fff',
+            padding: '24px',
+            margin: 0,
+            minHeight: '1245px',
+          }"
+        >
+          <resume />
+        </a-layout-content>
+      </a-layout>
+    </a-layout>
+  </a-layout>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import resume from "./components/resume.vue";
+import sider from "./components/sider.vue"
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  components: { resume,sider },
+  data() {
+    return {
+      collapsed: false,
+    };
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+#components-layout-demo-top-side-2 .logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 28px 16px 0;
+  float: left;
+}
+#components-layout-demo-top-side-2 {
+  height: 100%;
+}
+#components-layout-demo-top-side-2 .header {
+  padding-left: 24px;
+  color: whitesmoke;
+  font-size: 20px;
 }
 </style>
