@@ -29,7 +29,7 @@
 <script>
 import resume from "./components/resume.vue";
 import sider from "./components/sider.vue"
-import commonMixin from '../mixin/common.mixin'
+import commonMixin from './mixin/common.mixin'
 export default {
   mixins:[commonMixin],
   components: { resume,sider },
