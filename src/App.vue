@@ -5,6 +5,7 @@
       <a-icon type="form" />
       <!-- </div> -->
       在线简历生成器
+      <span style="float:right">{{getDateText()}}</span>
     </a-layout-header>
     <a-layout>
       <sider/>
@@ -28,7 +29,9 @@
 <script>
 import resume from "./components/resume.vue";
 import sider from "./components/sider.vue"
+import commonMixin from '../mixin/common.mixin'
 export default {
+  mixins:[commonMixin],
   components: { resume,sider },
   data() {
     return {
