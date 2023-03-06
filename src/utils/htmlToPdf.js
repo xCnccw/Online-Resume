@@ -4,7 +4,8 @@ import JsPDF from 'jspdf'
 export default{
   install (Vue) {
     Vue.prototype.getPdf = function () {
-      var title = this.htmlTitle
+      console.log(Vue.prototype);
+      var title = '我的简历'
       html2Canvas(document.querySelector('#pdfDom'), {
         allowTaint: true
       }).then(function (canvas) {
