@@ -1,9 +1,7 @@
 // 导出页面为PDF格式
 import html2Canvas from 'html2canvas'
 import JsPDF from 'jspdf'
-import commonMixin from '../../mixin/common.mixin'
 export default{
-  mixins:[commonMixin],
   install (Vue) {
     Vue.prototype.getPdf = function () {
       var title = '我的简历'
